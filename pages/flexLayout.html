@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>CodePen - Demo Flex</title>
+        <style>
+            body {
+                padding: 2em;
+            }
+
+            .headerContainer {
+                display: flex;
+                flex-flow: column wrap;
+                align-content: center;
+                background: tomato;
+                font-weight: bold;
+                color: rgb(15, 15, 15);
+                padding: 10px;
+            }
+            .footerContainer {
+                display: flex;
+                flex-flow: column wrap;
+                align-content: center;
+                background: rgb(153, 216, 58);
+                font-weight: bold;
+                color: rgb(116, 5, 5);
+                padding: 10px;
+            }
+            .mainContainer {
+                display: flex;
+                flex-flow: row wrap;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .mainContentItem {
+                text-align: center;
+                background: deepskyblue;
+            }
+
+            .article {
+                padding: 10px;
+                margin: 10px;
+                background: aqua;
+            }
+
+            .sideBarLeftItem { background: rgb(235, 20, 138); }
+            .sideBarRightItem { background: rgb(216, 18, 84); }
+
+            .sideBarItem { flex: 1 0 0; border: 0px solid greenyellow; }
+            .mainContentItem { flex: 3 0px; }
+            .sideBarLeftItem { order: 1; }
+            .mainContentItem { order: 2; }
+            .sideBarRightItem { order: 3; }
+        </style>
+    </head>
+    <body>
+        <header class="headerContainer"><h1>HEADER - Sample FlexBox Example</h1></header>
+        <div class="mainContainer">
+            <section class="mainContentItem">
+                <article>
+                    <h1>First Article</h1>
+                    <p>Hello, This is my first Example of FlexBox</p>
+                </article>
+                <article>
+                    <h2>Second Article</h2>
+                    <p></p>
+                </article>
+                <article>
+                    <h3>Third Article</h3>
+                    <p></p>
+                </article>
+            </section>
+            <sidebar class="sideBarItem sideBarLeftItem">Left-Side-Bar-Item</sidebar>
+            <sidebar class="sideBarItem sideBarRightItem">Right-Side-Bar-Item</sidebar>
+        </div>
+        <footer class="footerContainer"><h1>Footer - Sample FlexBox Example</h1></footer>
+    </body>
+</html>
